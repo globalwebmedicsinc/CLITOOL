@@ -36,14 +36,14 @@ echo "23)Checking Server Utilization"
 echo "24)Check Disk Space"
 echo "25)Un Nest"
 echo "26)Freq"
-echo "27)"
+echo "27)Install Virtualmin Webmin for Graphical User Interface - 3RD Party"
 echo "28)"
 echo "29)"
 echo "30)"
 echo "31)"
 echo "32)"
 echo "33)"
-echo "34)"
+echo "34)Update Script"
 echo "35)Exit Console"
 #########################################
 #########################################
@@ -193,6 +193,7 @@ if [[ -d "${FOLDER}" ]]; then
 fi
 
 };;
+27) wget http://software.virtualmin.com/gpl/scripts/install.sh && chmod install.sh u+x && sudo ./install.sh;;
 #########################################
 #########################################
 #############EDIT WITH COUTION###########
