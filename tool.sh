@@ -193,7 +193,7 @@ if [[ -d "${FOLDER}" ]]; then
 fi
 
 };;
-27) wget http://software.virtualmin.com/gpl/scripts/install.sh && chmod install.sh u+x && sudo ./install.sh;;
+27) wget http://software.virtualmin.com/gpl/scripts/install.sh && chmod u+x install.sh && sudo ./install.sh;;
 #########################################
 #########################################
 #############EDIT WITH COUTION###########
