@@ -5,13 +5,14 @@
 #@COMPANY	GLOBAL WEB MEDICS
 #@LINK		https://www.globalwebmedics.com/index.php/
 ######################################################
+set -e
 CHOICE=7
 until [ $CHOICE -eq 35 ]
 do
 clear
-echo "Web-Dev CLI V1.20"							
+echo "Web-Dev CLI V1.20"
 echo "1)Display your Working directory"
-echo "2)Display your home directory"		
+echo "2)Display your home directory"
 echo "3)List the contents of your current working directory"
 echo "4)gedit REQUIRES GUI"
 echo "5)Mysql Start"
@@ -70,7 +71,7 @@ case $CHOICE in
 13)	sudo apt-get upgrade;;
 14) sudo apt-get clean;;
 15) echo -n "Which Directory do you wish to backup?"
-read CHOICE 
+read CHOICE
     sudo tar -cvf backup.tar $CHOICE;;
 16)sudo tar -uvf backup.tar /var/www/html/*;;
 #####################################
@@ -96,7 +97,7 @@ echo "*****************" >> "$logfile";;
 20)	mysql -u USERHERE -p;;
 21)	passwd;;
 22)	echo "Welcome, I am ready to encrypt a file/folder for you"
-echo "currently I have a limitation, Point me to the folder, where a file to be 
+echo "currently I have a limitation, Point me to the folder, where a file to be
 encrypted is present."
 echo "Enter the Exact File Name with extension"
 read file;
@@ -107,7 +108,8 @@ mv ~ $file
 echo "Now I will be removing the original file from its encrypted location."
 rm -rf $file
 echo "process is complete.";;
-23) date
+23) echo "Starting..."; 
+date
 echo "uptime:"
 uptime
 echo "Currently connected:"
